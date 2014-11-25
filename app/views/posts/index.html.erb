@@ -1,0 +1,15 @@
+<div class="westside">
+    <% @posts.each do |post| %>
+        <h2><%= post.title %></h2>
+        <p><%= post.content %></p>
+    <% end %>
+</div>
+<div class="eastside">
+    <%= form_for @post do |post| %>
+        <%= post.label :title %>
+        <%= post.text_field :title %>
+        <%= post.label :content %>
+        <%= post.text_area :content %>
+        <%= post.submit %>
+    <% end %>
+</div>
